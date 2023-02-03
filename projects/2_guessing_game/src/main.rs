@@ -1,5 +1,6 @@
-use std::io;
 use rand::Rng;
+use std::cmp::Ordering;
+use std::io;
 
 fn main() {
     println!("Guess the number!");
@@ -17,5 +18,13 @@ fn main() {
         // Result is an enumeration (enum for short), which is a type that can be in one of multiple possible states. Each possible state is called a variant.
         .expect("Failed to read line"); // It's good to introduce a new line when you call a method with .method_name() syntax
     
+    let guess: u32 = guess.trim().parse().expect("Please type a number!");
+    
     println!("You guessed: {guess}");
+  
+    match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too small!"),
+        Ordering::Greater => println!("Too big!"),
+        Ordering::Equal => println!("You win!"),
+    }
 }
