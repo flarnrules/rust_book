@@ -7,24 +7,44 @@ fn main() {
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
-    println!("The secret number is: {secret_number}");
+    let mut guesses = 10;
 
-    println!("Please input your guess.");
+    while guesses > 0 {
+        println!("You have {} guesses remaining.", guesses);
 
-    let mut guess = String::new(); // String is a string type that is growable
+        loop {
+            println!("Please input your guess.");
 
-    io::stdin()
-        .read_line(&mut guess) // Puts whatever the user enters into the string we pass to it, but also returns a `Result` value
-        // Result is an enumeration (enum for short), which is a type that can be in one of multiple possible states. Each possible state is called a variant.
-        .expect("Failed to read line"); // It's good to introduce a new line when you call a method with .method_name() syntax
+            let mut guess = String::new();
+
+            io::stdin()
+                .read_line(&mut guess)
+                .expect("Failed to read line");
+            
+            let guess: u32 = match guess.trim().parse() {
+                Ok(num) => num,
+                Err(_) => continue,
+            };
+            guesses -=1;
+
+            println!("You guessed: {guess}");
+            
+            if guesses == 0 {"You lost. The secret number was {}", secret_nmber};
+
+            match guess.cmp(&secret_number) {
+                Ordering::Less => println!("Too small!"),
+                Ordering::Greater => println!("Too big!"),
+                Ordering::Equal => {
+                    println!("You win!");
+                    break;
+                }
+            }
+            
+            guesses -=1;
+        }
     
-    let guess: u32 = guess.trim().parse().expect("Please type a number!");
-    
-    println!("You guessed: {guess}");
-  
-    match guess.cmp(&secret_number) {
-        Ordering::Less => println!("Too small!"),
-        Ordering::Greater => println!("Too big!"),
-        Ordering::Equal => println!("You win!"),
+    if guesses == 0 {
+        println!("You lost. The secret number was {}", secret_number);
+    }
     }
 }
