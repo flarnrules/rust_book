@@ -32,8 +32,8 @@ Signed stores numbers from -(2<sup>n-1</sup>) to 2<sup>n-1</sup>-1 so the formul
 
  -(2<sup>7</sup>) to (2<sup>7</sup>)-1 = -128 to 127.
 
-Unsigned stores numbers from 0 to 2^n^ - 1 so the formual works like this for a u8 integer:
+Unsigned stores numbers from 0 to 2<sup>n</sup>-1 so the formual works like this for a u8 integer:
 
-`2^8^ -1 = 0 to 255.`
+2<sup>8</sup>-1 = 0 to 255.
 
 ## Compound
