@@ -12,7 +12,28 @@ A *scalar* type represents a single value. Rust has four primary scalar types:
 3. Booleans,
 3. characters
 
-### Integer Types
+### 1 Integer Types
 An integer is a number without a factional component.
+
+Integer types in Rust:
+
+| Length  | Signed | Unsigned |
+|   ---   |   ---  |    ---   |
+| 8-bit   |   i8   |    u8    |
+| 16-bit  |   i16  |   u16    |
+| 32-bit  |   i32  |   u32    |
+| 64-bit  |   i64  |   u64    |
+| 128-bit |  i128  |   u128   |
+| arch    | isize  |  usize   |
+
+Each integer can be either signed on unsigned and has an explicit size. Signed means it can be both positive or negative, unsigned just means it's a positive number.
+
+Signed stores numbers from -(2^n-1) to 2^n-1 - 1 so the formula works like this for an i8 integer:
+
+`-(2^7) to (2^7)-1 = -128 to 127.`
+
+Unsigned stores numbers from 0 to 2^n - 1 so the formual works like this for a u8 integer:
+
+`2^8 -1 = 0 to 255.`
 
 ## Compound
