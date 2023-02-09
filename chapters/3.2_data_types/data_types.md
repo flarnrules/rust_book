@@ -28,12 +28,12 @@ Integer types in Rust:
 
 Each integer can be either signed on unsigned and has an explicit size. Signed means it can be both positive or negative, unsigned just means it's a positive number.
 
-Signed stores numbers from -(2^n-1) to 2^n-1 - 1 so the formula works like this for an i8 integer:
+Signed stores numbers from -(2^n-1^) to 2^n^-1 - 1 so the formula works like this for an i8 integer:
 
-`-(2^7) to (2^7)-1 = -128 to 127.`
+`-(2^7^) to (2^7^)-1 = -128 to 127.`
 
-Unsigned stores numbers from 0 to 2^n - 1 so the formual works like this for a u8 integer:
+Unsigned stores numbers from 0 to 2^n^ - 1 so the formual works like this for a u8 integer:
 
-`2^8 -1 = 0 to 255.`
+`2^8^ -1 = 0 to 255.`
 
 ## Compound
