@@ -1,5 +1,14 @@
 # Rust Key Concepts
 
+## Cargo / version control
+
+Running `$ cargo new <project name>` will generate a new project. Running `cargo new` will not generate Git files if run inside an existing Git repository. This can be overridden by running the command `cargo new --vcs=git <project name>`
+
+I don't understand how this works yet. After testing, running `cargo new --vcs=git <project name>` appears to generate a bunch of files inside my repo that are not connected to my Git repo and cannot be pushed to Github.
+
+This behavior is essentially the opposite of what I would expect.
+
+
 ## When to use snake_case
 
 *items typed in snake_case*
