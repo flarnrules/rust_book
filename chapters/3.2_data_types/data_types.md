@@ -9,8 +9,9 @@ Rust is a *statically typed* language, which means that it must konw what type w
 A *scalar* type represents a single value. Rust has four primary scalar types:
 1. Integers,
 2. Floating-point numbers,
-3. Booleans,
-3. characters
+4. Numeric operators,
+5. Booleans,
+6. characters
 
 ### 1 Integer Types
 An integer is a number without a factional component.
@@ -35,5 +36,52 @@ Signed stores numbers from -(2<sup>n-1</sup>) to 2<sup>n-1</sup>-1 so the formul
 Unsigned stores numbers from 0 to 2<sup>n</sup>-1 so the formual works like this for a u8 integer:
 
 2<sup>8</sup>-1 = 0 to 255.
+
+### 2 Floating-Point Types
+
+There are two primitive types for *floating-point numbers*. Floating-point numbers are numbers with decimal points.
+
+Example:
+
+```rust
+
+fn main() {
+    let x = 2.0; // f64 - the type was not explicitly declared, but because f64 is the default type, Rust sets x as an f64.
+
+    let y: f32 = 3.0 // f32
+}
+```
+
+Floating-point integers default to f64 because on modern CPUs, a 64 bit piece of data is roughly the same speed as a 32 bit piece of data, but it's capable of more precision.
+
+Floating-point numbers are represented according to IEEE-754 standard. The `f32` type is a single-precision float, and the `f64` has double precision.
+
+### 3 Numeric Operators
+
+Addition, subtraction, multiplication, division, and remainder.
+
+``` rust
+
+fn main(){
+    // addition
+    let sum = 5 + 10;
+
+    // subtraction
+    let difference = 10-5;
+
+    // multiplication
+    let product = 5 * 10;
+
+    // division
+    let quotient = 1000 / 10;
+    let floored = 10 / 1000;
+
+    // remainder
+    let remainder = 43 % 5; // also known as "modulus"
+
+}
+```
+
+Note: Integer division round sown to the nearest integer.
 
 ## Compound
