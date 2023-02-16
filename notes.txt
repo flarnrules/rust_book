@@ -1,5 +1,31 @@
-Getting started:
-Run `rustup update`
+🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀
+-------------------------
+|                       |
+|  FLARN'S RUST NOTES   |
+|                       |
+|  FROM "THE RUST BOOK  |
+|                       |
+-------------------------
+
+
+Common Commands:
+`rustup update`
+`cargo new`
+`cargo run`
+
+Types:
+Scalar - means a single value
+	 - There are 4 primary scalar types (also numeric operators)
+	 - Integers, Floating-point numbers, Booleans, Characters
+
+These are the different ways to specify the scalar types -
+
+	Integers: 		i8, u8, i16, u16, i32, u32, i64, u64, i128, u128, isize, usize
+	Floating-Points: 	f32, f64
+	Boolean: 		bool
+	Character: 		char
+
+
 
 
 
