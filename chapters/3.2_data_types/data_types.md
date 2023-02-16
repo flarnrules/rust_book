@@ -106,6 +106,19 @@ The main way to use Boolean values is through conditionals, such as `if` express
 
 ### 4 The Character Type
 
+Rust's `char` type is the language's most primitive alphabetic type. Here's some examples of declaring `char` values:
 
+```rust
+
+fn main() {
+    let c = 'z';
+    let z: char = 'Z'; // with explicity type annotation
+    let heart_eyed_cat = '😻';
+    let crab = '🦀';
+}
+```
+Note: we specify `char` literals with single quotes. String literals are specified with double quotes. A `char` type is four bytes in size, and represents a Unicode Scalar Value, which means it can represent more than just ASCII.
+
+Unicode Scalar Values include accented letters; Chinese, Japanese, and Korean characters; emoji; and zero-width spaces. The concept of `char` is discussed in more detail in Chapter 8 - "Storing UTF-8 Encoded Text with Strings.
 
 ## Compound
