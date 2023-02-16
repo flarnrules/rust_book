@@ -1,17 +1,18 @@
 # Data Types
 - Every value in rust is of a certain *data type*
 - We will look at two data type subsets: **scalar** and **compound**
+- In later chapters there's something called **generic** types, which are super confusing.
 
-Note:
+*Note:*
 Rust is a *statically typed* language, which means that it must konw what type we want to use based on the value and how we use it.
 
 ## Scalar
 A *scalar* type represents a single value. Rust has four primary scalar types:
 1. Integers,
 2. Floating-point numbers,
-4. Numeric operators,
-5. Booleans,
-6. characters
+* Numeric operators,
+3. Booleans,
+4. Characters
 
 ### 1 Integer Types
 An integer is a number without a factional component.
@@ -56,7 +57,7 @@ Floating-point integers default to f64 because on modern CPUs, a 64 bit piece of
 
 Floating-point numbers are represented according to IEEE-754 standard. The `f32` type is a single-precision float, and the `f64` has double precision.
 
-### 3 Numeric Operators
+### * Numeric Operators
 
 Addition, subtraction, multiplication, division, and remainder.
 
@@ -82,6 +83,29 @@ fn main(){
 }
 ```
 
-Note: Integer division round sown to the nearest integer.
+Note: Integer division rounds down to the nearest integer.
+
+Each expression above uses a mathematical operator and evalutes to a single value, which is then bound to the variable. Rust Book Appendix B contains a list of all operators provided in Rust.
+
+### 3 The Boolean Type
+
+A Boolean type in Rust has two values: `true` and `false`
+
+Booleans are one byte in size. A Boolean type in Rust is specified using `bool`. Example:
+
+```rust
+
+fn main() {
+    let t = true;
+
+    let f; bool = false; // with explicit type annotation
+}
+```
+
+The main way to use Boolean values is through conditionals, such as `if` expressions. This is covered in the Control Flow section of this chapter.
+
+### 4 The Character Type
+
+
 
 ## Compound
