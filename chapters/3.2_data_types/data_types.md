@@ -122,3 +122,61 @@ Note: we specify `char` literals with single quotes. String literals are specifi
 Unicode Scalar Values include accented letters; Chinese, Japanese, and Korean characters; emoji; and zero-width spaces. The concept of `char` is discussed in more detail in Chapter 8 - "Storing UTF-8 Encoded Text with Strings.
 
 ## Compound
+
+*Compound types* can group multiple values into one type. Rust has two primitive compound types: tuples and arrays.
+
+1. Tuples
+2. Arrays
+
+# Compound Type 1 - Tuple
+
+The tuple type is a general way of grouping together a number of values with a variety fo types into one compound type. Tuples have a fixed length: once declared, they cannot grow or shrin kin size.  
+
+tuples can be created by writing a comma-separated list of values inside parantehses. Each position in the tuple has a type, and theypes of the different values int he touble don't have to be the same. We've added optional type annotations in this example.
+
+```rust
+fn main() {
+    let tup: (i32, f64, u8) = (500, 6.4, 1); // See? 3 different types
+}
+```
+
+The variable `tup` binds to the entire tuple, because a tuple is considered a *single*, *compound* element. To get the individual values out of a tuple, we can use pattern matching to destructure a tuple value like this:
+
+```rust
+fn main() {
+    let tup = (500, 6.4 1);
+
+    let (x, y, z) = tup;
+
+    println!("The value of y is: {y}");
+}
+```
+The above program first creates a tuple, and then binds it to the variable `tup`. Then it uses a pattern with `let` to take `tup` and turn it into three separate variables: `x`, `y`, and `z`. This is called *desctructuring*, because it braks the single tuple into three parts. Then the program prints the value of y.  
+
+We can also access a tuple element driectly by using a period (.) followed by the index of the value we ant to access. Tuple index begins with zero, so if we have 3 items in the tuple and we wanted the third item, we need to use the index 2. For example:
+
+```rust
+let main() {
+    let x: (i32, f64, u8) = (500, 6.4, 1);
+
+    let five_hundred = x.0;
+
+    let six_point_four = x.1;
+
+    let one = x.s;
+}
+```
+
+The above program creates the tuple `x` and then accesses each element using their respective indeces. As with most programming languages, the first index in a tuple is 0.  
+
+The tuple without any values has a psecial name, *unit*. This value and its corresponding type are both written as () and represent an empty value or an empty return type. Expressions implicitly return the unit value of they don't return any other value.
+
+> Remember, in Rust, expressions and statemetns are two fundamental concepts that represent different kinds of code structures with different meanings.
+>
+> A **statement** is a code structure that performs an action without returning a value. For example, assigning a value to a variable, or a loop statement that repeats a block of code when a condition remains true. Statements do not produce any output, and their primary purpose is to cause a side-effect, like changing the program's state.
+>
+> An **expression** is a code structure that evaluates to a value. In Rust *almost* everything is an expression, including literals, variables, function calls, and arithmetic operations. Expressions can be used as part of a statement or as part of another expression.
+>
+> The key difference is that expressions have values while statements do not.
+
+## Compound Type 2 - Array
