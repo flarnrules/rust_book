@@ -157,19 +157,20 @@ The above program first creates a tuple, and then binds it to the variable `tup`
 
 We can also access a tuple element driectly by using a period (.) followed by the index of the value we ant to access. Tuple index begins with zero, so if we have 3 items in the tuple and we wanted the third item, we need to use the index 2. For example:
 
+```rust
 <pre><code class="hljs">
-    ```rust
-    let main() {
-        let x: (i32, f64, u8) = (500, 6.4, 1);
 
-        let five_hundred = x.0;
+let main() {
+    let x: (i32, f64, u8) = (500, 6.4, 1);
 
-        let six_point_four = x.1;
+    let five_hundred = x.0;
 
-        let one = x.s;
-    }
-    ```
+    let six_point_four = x.1;
+
+    let one = x.s;
+}
 </code></pre>
+```
 
 The above program creates the tuple `x` and then accesses each element using their respective indeces. As with most programming languages, the first index in a tuple is 0.  
 
