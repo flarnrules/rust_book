@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+
 # Data Types
 - Every value in rust is of a certain *data type*
 - We will look at two data type subsets: **scalar** and **compound**
@@ -155,17 +157,19 @@ The above program first creates a tuple, and then binds it to the variable `tup`
 
 We can also access a tuple element driectly by using a period (.) followed by the index of the value we ant to access. Tuple index begins with zero, so if we have 3 items in the tuple and we wanted the third item, we need to use the index 2. For example:
 
-```rust
-let main() {
-    let x: (i32, f64, u8) = (500, 6.4, 1);
+<pre><code class="hljs">
+    ```rust
+    let main() {
+        let x: (i32, f64, u8) = (500, 6.4, 1);
 
-    let five_hundred = x.0;
+        let five_hundred = x.0;
 
-    let six_point_four = x.1;
+        let six_point_four = x.1;
 
-    let one = x.s;
-}
-```
+        let one = x.s;
+    }
+    ```
+</code></pre>
 
 The above program creates the tuple `x` and then accesses each element using their respective indeces. As with most programming languages, the first index in a tuple is 0.  
 
@@ -180,3 +184,7 @@ The tuple without any values has a psecial name, *unit*. This value and its corr
 > The key difference is that expressions have values while statements do not.
 
 ## Compound Type 2 - Array
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
