@@ -17,6 +17,7 @@ A *scalar* type represents a single value. Rust has four primary scalar types:
 ### 1 Integer Types
 An integer is a number without a factional component.
 
+<center>
 Integer types in Rust:
 
 | Length  | Signed | Unsigned |
@@ -27,6 +28,8 @@ Integer types in Rust:
 | 64-bit  |   i64  |   u64    |
 | 128-bit |  i128  |   u128   |
 | arch    | isize  |  usize   |
+
+</center>
 
 Each integer can be either signed on unsigned and has an explicit size. Signed means it can be both positive or negative, unsigned just means it's a positive number.
 
