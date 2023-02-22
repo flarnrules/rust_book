@@ -134,7 +134,7 @@ Unicode Scalar Values include accented letters; Chinese, Japanese, and Korean ch
 1. Tuples
 2. Arrays
 
-# Compound Type 1 - Tuple
+### Compound Type 1 - Tuple
 
 The tuple type is a general way of grouping together a number of values with a variety fo types into one compound type. Tuples have a fixed length: once declared, they cannot grow or shrin kin size.  
 
@@ -163,7 +163,7 @@ We can also access a tuple element driectly by using a period (.) followed by th
 
 
 ```rust
-let main() {
+fn main() {
     let x: (i32, f64, u8) = (500, 6.4, 1);
 
     let five_hundred = x.0;
@@ -186,5 +186,18 @@ The tuple without any values has a psecial name, *unit*. This value and its corr
 >
 > The key difference is that expressions have values while statements do not.
 
-## Compound Type 2 - Array
+### Compound Type 2 - Array
 
+Another way to have a collection of multiple values is an *array*. Unlike tuples, every element of an array must have the **same** type. In rust, arrays **must** have a fixed length.  
+
+We write an array as a comma-separated list inside square brackets:  
+
+```rust
+fn main () {
+    let a = [1, 2, 3, 4, 5];
+}
+```
+
+Arrays are useful when you want your data allocated on the **stack** rather than the **heap**. See diagram below.
+
+[StackVersusHeap](https://github.com/flarnrules/images/blob/main/stack_vs_heap.png)
