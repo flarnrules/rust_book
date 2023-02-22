@@ -200,4 +200,4 @@ fn main () {
 
 Arrays are useful when you want your data allocated on the **stack** rather than the **heap**. See diagram below.
 
-[StackVersusHeap](https://github.com/flarnrules/images/blob/main/stack_vs_heap.png)
+![StackVersusHeap](https://github.com/flarnrules/images/blob/main/stack_vs_heap.png)
