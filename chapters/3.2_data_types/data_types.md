@@ -201,3 +201,67 @@ fn main () {
 Arrays are useful when you want your data allocated on the **stack** rather than the **heap**. See diagram below.
 
 ![StackVersusHeap](https://github.com/flarnrules/images/blob/main/stack_vs_heap.png)
+
+Arrays are also useful when you want to ensure you always have a fixed number of elements. It is not as flexible as the vector type. A vector is a similar collection type provided by the standard libriary that is growable and shrinkable. During times of uncertainty, probably best to use a vector.
+
+Arrays are useful when you know the number of elements will not need to change. For example, names of the month in a program, you always know there are 12 months.
+
+```rust
+let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+```
+
+You write an array's type using square brackets with the type of each element, a semicolon, and then the number of elements in the array like this:
+
+```rust
+let a: [i32; 5] = [1, 2, 3, 4, 5];
+```
+Why didn't we need to do this with the months example?
+
+You can also initialize an array to contain the same value for each element by specifying the intiial value, followed by a semicolon, and then the length of the array in square brackets like this:
+
+```rust
+let a = [3; 5];
+```
+In this example, the type was not specified.
+
+**Accessing Array Elements**
+
+An array is a single chunk of memory of a known, fixed size that can be allocated on the stack. You can access elemetns of an array using indexing, like this:
+
+```rust
+fn main() {
+    let a = [1, 2, 3, 4, 5]; // declare the array
+
+    let first = a[0]; // declare "first" variable, at index 0. We are assigning the value 1 to first
+    let second = a[1]; // declare "second" variable, at index 1. We are assigning the value 2 to second.
+}
+```
+
+**Invalid Array Element Access**
+
+Let's see what happens when we try to access an element of an array that is past the end of the array.
+
+```rust
+
+use std::io;
+
+fn main() {
+    let a = [1, 2, 3, 4, 5];
+
+    println!("Please enter an array index.");
+
+    let mut index = String::new();
+
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
+    
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
+    
+    let element = a[index];
+
+    println!("The value of the element at index {index} is: {element}");
+}
