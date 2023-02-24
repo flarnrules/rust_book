@@ -253,7 +253,7 @@ fn main() {
     let mut index = String::new();
 
     io::stdin()
-        .read_line(&mut index)
+        .read_line(&mut index) // a reference is happening here because of the & symbol.
         .expect("Failed to read line");
     
     let index: usize = index
@@ -265,3 +265,11 @@ fn main() {
 
     println!("The value of the element at index {index} is: {element}");
 }
+```
+> ⚠️ Warning!
+> 
+> This code has situations that will cause the code to panic if an index above 5 (value of 4) is given in response to the stdin element.
+>
+
+The above program results in a *runtime error* when we input an improper index.
+
