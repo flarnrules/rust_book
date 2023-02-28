@@ -103,5 +103,5 @@ Adding a semicolon to the end of an expression turns it into a statement, and th
 
 ## Functions with Return Values
 
-The syntax `->` tells Rust to return a value. I need to read this section a few more times, in conjunction with the previous section. 
+The syntax `->` tells Rust to return a value. I need to read this section a few more times, in conjunction with the previous section. 🧠
 
