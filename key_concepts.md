@@ -1,3 +1,7 @@
+# Installing and Updating Rust
+
+
+
 # Rust Key Concepts
 
 ## Cargo / version control
@@ -11,7 +15,7 @@ I don't understand how this works yet. After testing, running `cargo new --vcs=g
 This behavior is essentially the opposite of what I would expect.
 
 
-## When to use snake_case
+## Naming Conventions
 
 *items typed in snake_case*
 1. functions
@@ -37,4 +41,8 @@ Custom types:
 
 Types of types:
 
+## Ownership
 
+## Borrowing
+
+##

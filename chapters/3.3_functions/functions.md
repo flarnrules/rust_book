@@ -105,3 +105,8 @@ Adding a semicolon to the end of an expression turns it into a statement, and th
 
 The syntax `->` tells Rust to return a value. I need to read this section a few more times, in conjunction with the previous section. 🧠
 
+Syntax `->` points to the type of value returned by the following blocks of code.
+
+The **return value** of the function is synonymous with the value of the final expression in the block of the body of a function.
+
+You can return early from a function by using the `return` keyword and specifying a value, but most functions return the *last expression* implicitly.
