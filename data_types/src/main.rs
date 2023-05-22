@@ -31,5 +31,4 @@ fn main() {
 
     println!("An u{n} integer starts with: {end_unsigned_range}");
     
-    
 }
