@@ -38,9 +38,14 @@ Scalar types:
 - signed integers (i8, i16, i32, i64, i128)
 - unsigned integers (u8, u16, u32, u64, u128)
 - floating-point numbers (f32, f64) 
-
+- numerical operators (+, -, *, /, %)
+- Boolean (bool = true, false)
+- Character (char = 'z' or char = 'Z')
 
 Compound types:
+
+- tuples
+- arrays
 
 Custom types:
 
