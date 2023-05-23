@@ -1,6 +1,6 @@
 fn main() {
 
-    let n: i128 = 128; // number of bits in an integer type
+    let n: i128 = 64; // number of bits in an integer type
     let i_power: i128 = n - 1; // subtract 1 from number of bits for a signed integer
     let u_power: i128 = n; // don't subtract 1 from number of bits for an unsigned integer
     

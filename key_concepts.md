@@ -27,13 +27,18 @@ This behavior is essentially the opposite of what I would expect.
 
 The function begins with `{` and ends with `}`
 
-**Call** function with the function ame folowed by `()`
+**Call** function with the function name folowed by `()`
 
 Functions can be **called** from inside the main function.
 
 ## Types
 
-Scalar types:
+Scalar types: 
+
+- signed integers (i8, i16, i32, i64, i128)
+- unsigned integers (u8, u16, u32, u64, u128)
+- floating-point numbers (f32, f64) 
+
 
 Compound types:
 
