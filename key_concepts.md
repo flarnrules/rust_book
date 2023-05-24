@@ -60,14 +60,21 @@ Arrays can be initialized to contain the same value for each element like this:
 ```rs
 let array = [3; 5];
 ```
-
-
 Arrays allocate the data on the stack, rather than the heap and ensure you always have a fixed number of elements.
 A vector is a similar collection type provided by the standard library that can grow or shrink.
 
 Custom types:
 
 Types of types:
+
+## Statements and Expressions
+
+A *statement* is an instruction that performs and action but does not return a value. Statements end in `;`
+
+An *expression* is an instruction that evaluates to a value and does not end in a `;`
+
+We can Use the `->` with a function to tell the function to return a value when the function is called.
+
 
 ## Ownership
 
