@@ -44,8 +44,26 @@ Scalar types:
 
 Compound types:
 
-- tuples
-- arrays
+- tuples - group a number of values with a variety of types into one compound type, fixed length:
+
+```rs
+let tup: (i32, f64, u8) = (500, 6.4, 1);
+```
+
+- arrays - group number of values where every element has the same type, fixed length:
+
+```rs
+let array: [i32; 5] = [1, 2, 3, 4, 5]; // declares an array with 5 elements all i32 integers
+```
+
+Arrays can be initialized to contain the same value for each element like this:
+```rs
+let array = [3; 5];
+```
+
+
+Arrays allocate the data on the stack, rather than the heap and ensure you always have a fixed number of elements.
+A vector is a similar collection type provided by the standard library that can grow or shrink.
 
 Custom types:
 
