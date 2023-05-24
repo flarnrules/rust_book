@@ -13,9 +13,9 @@ fn main() {
     loop { // loops through everything contained inside the {}
         println!("Please input your guess.");
 
-        let mut guess = String::new(); // let statement creates a variable, the = sign tells Rust we want to bind something to the variable right now. the :: syntax indicates that new is an associated function of the `string` type. an associated function is a function that is implemented on a type. this `new` function creates a new, empty string. this line created a mutalble variable that is currently bound to a new, empty instance of a string.
+        let mut guess = String::new(); // let statement creates a variable, the = sign tells Rust we want to bind something to the variable right now. the :: syntax indicates that new is an associated function of the `string` type. an associated function is a function that is implemented on a type. this `new` function creates a new, empty string. this line created a mutable variable that is currently bound to a new, empty instance of a string.
 
-        io::stdin() // calls the `stdin function from the io module, which allows us to handle user inptu
+        io::stdin() // calls the `stdin function from the io module, which allows us to handle user input
             .read_line(&mut guess) // this calls the read_line method to get input from the user. &mut guess is passed as the argument to read_line to tell what string to store the user input in. the & indicates that this argument being passed is a "reference" which gives you a way to let mulitiple parts of your code access one piece of data without the need to cpy the data into memory multiple times. references are mutable by default, hence the need to add mut.
             .expect("Failed to read line"); // calls expect in case the result of the .read_line method is "err". This is error handling.
 
