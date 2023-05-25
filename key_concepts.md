@@ -75,6 +75,12 @@ An *expression* is an instruction that evaluates to a value and does not end in 
 
 We can Use the `->` with a function to tell the function to return a value when the function is called.
 
+## Control Flow
+
+If *expressions* use the `if` keyword to test a conditional and execute the following block of code if the conditional is true. If the conditional is false, the code will move on to the next block of code. We can string if *expressions* together with `else` and `else if`.
+
+Loops repeat a block of code. There are three types of loops:
+
 
 ## Ownership
 
