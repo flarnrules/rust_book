@@ -77,9 +77,23 @@ We can Use the `->` with a function to tell the function to return a value when 
 
 ## Control Flow
 
+**If Expressions**
 If *expressions* use the `if` keyword to test a conditional and execute the following block of code if the conditional is true. If the conditional is false, the code will move on to the next block of code. We can string if *expressions* together with `else` and `else if`.
 
+**Loops**
 Loops repeat a block of code. There are three types of loops:
+
+1. loop
+2. while
+3. for
+
+**Loop Labels**
+Loop labels can be used to help disambiguate loops, especially in situations where there's loops inside of loops. A loop label can be applied by starting with a single quote and then, in snake_case, writing a descriptive name of the loop followed by a colon, like this:
+
+```rs
+'loop_label: loop
+```
+
 
 
 ## Ownership
