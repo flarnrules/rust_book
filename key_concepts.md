@@ -94,9 +94,22 @@ Loop labels can be used to help disambiguate loops, especially in situations whe
 'loop_label: loop
 ```
 
-
-
 ## Ownership
+
+Ownership rules in Rust are important concepts unique to rust, and they relate to how memory is allocated to either the stack or the heap.
+
+**The Stack**
+The stack is a form of storing data where each new addition of data is called *pushing onto the stack* and each removal of data is called *popping off the stack*. Every time new data is added or *pushed onto the stack*, it gets added to the top of the stack, like a stack of plates. Likewise, each time we *pop* something off of the stack, it is the top item. Thus it follows a *last in, first out* method.
+
+**The Heap**
+The heap is a form of storing data where it's less organized than the stack. You request a certain amount of space, and the memory allocator finds an empty spot that is big enough, marks it as being used and returns a *pointer*. This process is called *allocating on the heap* or just *allocating*. Adding data to the stack is ***not*** called allocating. The *pointer* itself can be stored on the stack because it is a known fixed size, but the data it points to is not on the stack, it's on the heap.
+
+There are three ownership rules in rust:
+
+1. Each value has an owner
+2. There can only be one owner at a time
+3. When the owner goes out of scope, the value will be dropped.
+
 
 ## Borrowing
 
