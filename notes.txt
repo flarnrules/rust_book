@@ -26,6 +26,13 @@ These are the different ways to specify the scalar types -
 	Character: 		char
 
 
+July 2, 2023
+
+Chapter 4 is about the most unique thing about Rust: the special ownership and borrowing paradigm that all Rust programs are bound by.
+
+Chapter 5 is about Structs, which are unique and powerful data types that allow us to group a whole bunch of different things together. We also learn how to write methods on structs, as well as associated functions to those structs.
+
+Chapter 6 is about enums, but I haven't finished this chapter so... I can't explain it.
 
 
 
